@@ -52,7 +52,7 @@ meanstddata <- meanstddata %>%
 tidyset <- meanstddata %>% 
         group_by(subjectid, activity) %>% 
         summarise_all(funs(mean)) %>% 
-        write_csv('./tidy.csv')
+        write.table('./tidy.txt', row.names = F)
 
 
 
